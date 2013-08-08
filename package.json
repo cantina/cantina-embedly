@@ -1,15 +1,14 @@
 {
   "name": "cantina-embedly",
   "version": "3.0.0",
+  "private": true,
   "description": "Embedly support for cantina applications.",
   "main": "cantina-embedly.js",
-  "dependencies": {},
-  "devDependencies": {
-    "mocha": "~1.12.0"
+  "dependencies": {
+    "underscore": "~1.5.1",
+    "request": "~2.26.0"
   },
-  "scripts": {
-    "test": "make test"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git://github.com/cpsubrian/cantina-embedly.git"
