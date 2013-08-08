@@ -5,7 +5,37 @@ Embedly support for cantina applications.
 
 [![build status](https://secure.travis-ci.org/cpsubrian/cantina-embedly.png)](http://travis-ci.org/cpsubrian/cantina-embedly)
 
+Provides
+--------
 
+- **app.embedly** - API for interacting with embedly.
+
+Configuration
+-------------
+
+```js
+{
+  embedly: {
+    url: 'http://api.embed.ly/1/oembed',
+    key: '<your api key>',
+    options: {
+      maxwidth: 500,
+      // Options merged into querystring
+    }
+  }
+}
+```
+
+Usage
+-----
+
+**app.embedly.fetch (url, callback)**
+
+```js
+app.embedly.fetch('http://www.google.com', function (err, data) {
+  // Data contains the embedly response.
+});
+```
 
 - - -
 

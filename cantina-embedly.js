@@ -6,6 +6,13 @@ app.embedly = module.exports = {
   fetch: fetch
 };
 
+// Default conf.
+app.conf.add({
+  embedly: {
+    url: 'http://api.embed.ly/1/oembed'
+  }
+});
+
 // Grab embedly conf.
 var conf = app.conf.get('embedly');
 var options = {
@@ -27,9 +34,10 @@ function fetch (url, callback) {
       try {
         body = JSON.parse(body);
         Object.keys(body).forEach(function (key) {
-          if( body[key] && typeof body[key] === 'string' && (key === 'meta' || key === 'oembed'
-            || key === 'open_graph' || key === 'place')){
-            body[key] = JSON.parse(body[key]);
+          if(body[key] && typeof body[key] === 'string'){
+            if (['meta', 'oembed', 'open_graph', 'place'].indexOf(key) >= 0) {
+              body[key] = JSON.parse(body[key]);
+            }
           }
         });
       } catch (e) {
