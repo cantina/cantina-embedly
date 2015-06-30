@@ -1,14 +1,16 @@
 {
   "name": "cantina-embedly",
-  "version": "3.0.0",
-  "private": true,
+  "version": "4.1.0",
   "description": "Embedly support for cantina applications.",
   "main": "cantina-embedly.js",
   "dependencies": {
-    "underscore": "~1.5.1",
-    "request": "~2.26.0"
+    "underscore": "^1.8.3",
+    "request": "^2.58.3"
   },
   "devDependencies": {},
+  "peerDependencies": {
+    "cantina": "^4.1.0"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/cpsubrian/cantina-embedly.git"
@@ -19,7 +21,12 @@
     "embedly"
   ],
   "author": "Brian Link <cpsubrian@gmail.com>",
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
   "bugs": {
     "url": "https://github.com/cpsubrian/cantina-embedly/issues"
   }
