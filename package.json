@@ -1,7 +1,6 @@
 {
   "name": "cantina-embedly",
   "version": "3.0.0",
-  "private": true,
   "description": "Embedly support for cantina applications.",
   "main": "cantina-embedly.js",
   "dependencies": {
